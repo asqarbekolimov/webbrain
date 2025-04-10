@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { CircleCheck, CircleX, Eye, EyeOff } from "lucide-react";
 import React, { useState } from "react";
 
-function AuthPage() {
+export default function ResetPage() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -148,5 +148,3 @@ function AuthPage() {
     </div>
   );
 }
-
-export default AuthPage;
