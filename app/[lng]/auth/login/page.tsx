@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
@@ -8,8 +8,6 @@ import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
   const router = useRouter();
-  const pathname = usePathname(); // masalan: /uz/auth/login
-  const lng = pathname?.split("/")[1]; // uz
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +15,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     if (email && password) {
-      router.push(`/${lng}/dashboard`);
+      router.push("/dashboard");
     }
   };
 
@@ -35,7 +33,10 @@ export default function LoginPage() {
             Email Address <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+            <Mail
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size={18}
+            />
             <Input
               type="email"
               placeholder="Enter your email address"
@@ -52,7 +53,10 @@ export default function LoginPage() {
             Password <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+            <Lock
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              size={18}
+            />
             <Input
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
