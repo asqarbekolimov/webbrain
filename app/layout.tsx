@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LoginPage from "./[lng]/auth/login/page";
 import ResetPage from "./[lng]/auth/new-password/page";
+import VerificationCodePage from "./[lng]/auth/verification/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         {children}
         <LoginPage />
         <ResetPage />
+        <VerificationCodePage />
       </body>
     </html>
   );
