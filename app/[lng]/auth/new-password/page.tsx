@@ -81,17 +81,29 @@ export default function ResetPage() {
         <div className="grid grid-cols-3 gap-2 mb-4">
           <span
             className={`h-1 ${
-              passwordValidation.hasUppercase ? "bg-green-500" : "bg-gray-300"
+              newPassword.length === 0
+                ? "bg-gray-300"
+                : passwordValidation.hasUppercase
+                ? "bg-green-500"
+                : "bg-red-500"
             } rounded-2xl`}
           ></span>
           <span
             className={`h-1 ${
-              passwordValidation.hasNumber ? "bg-green-500" : "bg-gray-300"
+              newPassword.length === 0
+                ? "bg-gray-300"
+                : passwordValidation.hasNumber
+                ? "bg-green-500"
+                : "bg-red-500"
             } rounded-2xl`}
           ></span>
           <span
             className={`h-1 ${
-              passwordValidation.hasMinLength ? "bg-green-500" : "bg-gray-300"
+              newPassword.length === 0
+                ? "bg-gray-300"
+                : passwordValidation.hasMinLength
+                ? "bg-green-500"
+                : "bg-red-500"
             } rounded-2xl`}
           ></span>
         </div>
